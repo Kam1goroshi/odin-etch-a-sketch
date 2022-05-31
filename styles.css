@@ -30,6 +30,9 @@ main{
     display: flex;
 }
 
+.row, .canvas, .pixel{
+    user-select: none;
+}
 
 header, main, footer{
     flex-shrink: 0;

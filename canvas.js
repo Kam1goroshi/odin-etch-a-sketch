@@ -1,3 +1,5 @@
+let isMouseDown = false;
+
 /**
  * Generates a pixel
  * @param {*} size 
@@ -7,9 +9,20 @@ const generatePixel = (size) => {
     pixel.startingColor = "#ffffff";
     const rect = document.createElement('div');
     rect.setAttribute('class','pixel');
+    rect.addEventListener('mouseover', () => {
+        if(isMouseDown)
+            rect.style.backgroundColor = "#b3b9bc";
+    })
+    rect.addEventListener('mousedown', () => {
+            rect.style.backgroundColor = "#b3b9bc";
+    })
+    
     rect.style.backgroundColor = pixel.startingColor;
     rect.style.width = `${size}px`;
     rect.style.height = `${size}px`;
+    rect.style.borderColor = "#b3b9bc";
+    rect.style.borderWidth = "1px";
+    rect.style.borderStyle = "solid";
     pixel.element = rect;
     return pixel;
 }
@@ -42,6 +55,19 @@ const displayCanvas = (canvas) => {
     });
 }
 
-const canvas = generateCanvas(16, 100);
+document.querySelector('body').addEventListener('mousedown', ()=>{
+    isMouseDown = true;
+})
+
+document.querySelector('body').addEventListener('mouseup', ()=>{
+    isMouseDown = false;
+})
+
+const canvas = generateCanvas(16, 30);
 displayCanvas(canvas);
+// canvas.pixelArray[2][2].element.style.borderColor = "#111111";
+
 console.log(canvas);
+
+// This is what eventually should happen on hover.
+// canvas.pixelArray[2][2].element.style.boxShadow = "inset 0 0 4px 4px  rgba(0,0,0,.5);
