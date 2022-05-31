@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    background-color: #e1f2f7;
 }
 
 body{
@@ -13,4 +14,18 @@ body{
 
 header, main, footer{
     flex-shrink: 0;
+}
+
+header, footer{
+    display: flex;
+    align-items: center;
+    background-color: #646c79;
+    color: white;
+}
+header{
+    justify-content: center;
+}
+footer{
+    padding: 15px 10px;
+    justify-content: right;
 }
