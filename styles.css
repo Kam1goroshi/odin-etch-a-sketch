@@ -12,9 +12,14 @@ body{
     justify-content: space-between;
 }
 
+.canvas{
+    width: fit-content;
+    height: fit-content;
+}
 .row{
+    width:fit-content;
+    height: fit-content;
     display: flex;
-    justify-content: center;
 }
 .pixel{
     background-color: #1d63d4;
