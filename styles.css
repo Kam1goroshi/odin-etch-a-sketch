@@ -12,6 +12,11 @@ body{
     justify-content: space-between;
 }
 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .canvas{
     width: fit-content;
     height: fit-content;
@@ -26,8 +31,8 @@ body{
 }
 .pixel{
     background-color: #ffffff;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 header, main, footer{
