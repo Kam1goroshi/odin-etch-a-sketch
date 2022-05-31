@@ -15,6 +15,9 @@ body{
 .canvas{
     width: fit-content;
     height: fit-content;
+    border-color: rgb(179, 175, 175);
+    border-width: 1px;
+    border-style: solid;
 }
 .row{
     width:fit-content;
@@ -22,9 +25,9 @@ body{
     display: flex;
 }
 .pixel{
-    background-color: #1d63d4;
-    width: 15px;
-    height: 15px;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
 }
 
 header, main, footer{
