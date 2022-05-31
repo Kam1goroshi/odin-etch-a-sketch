@@ -29,11 +29,7 @@ main{
     height: fit-content;
     display: flex;
 }
-.pixel{
-    background-color: #ffffff;
-    width: 100px;
-    height: 100px;
-}
+
 
 header, main, footer{
     flex-shrink: 0;

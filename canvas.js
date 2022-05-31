@@ -14,8 +14,6 @@ const generatePixel = (size) => {
     return pixel;
 }
 
-// Was doing: adding row element to canvas object
-// to do: add pixels as children to that row, clear css
 const generateCanvas = (pixelCount, pixelSize) => {
     const canvas = new Object();
     canvas.pixelArray = new Array(pixelCount);
@@ -42,6 +40,6 @@ const displayCanvas = (canvas) => {
     });
 }
 
-const canvas = generateCanvas(16, 50);
+const canvas = generateCanvas(16, 100);
 displayCanvas(canvas);
 console.log(canvas);
