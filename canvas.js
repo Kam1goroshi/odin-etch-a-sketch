@@ -1,5 +1,5 @@
 let isMouseDown = false;
-
+let brushColor = "#000"
 /**
  * Generates a pixel
  * @param {*} size 
@@ -11,10 +11,10 @@ const generatePixel = (size) => {
     rect.setAttribute('class','pixel');
     rect.addEventListener('mouseover', () => {
         if(isMouseDown)
-            rect.style.backgroundColor = "#b3b9bc";
+            rect.style.backgroundColor = brushColor;
     })
     rect.addEventListener('mousedown', () => {
-            rect.style.backgroundColor = "#b3b9bc";
+            rect.style.backgroundColor = brushColor;
     })
     
     rect.style.backgroundColor = pixel.startingColor;
@@ -63,7 +63,11 @@ document.querySelector('body').addEventListener('mouseup', ()=>{
     isMouseDown = false;
 })
 
-const canvas = generateCanvas(16, 30);
+document.querySelector('body').addEventListener('mouseleave', ()=>{
+    isMouseDown = false;
+})
+
+const canvas = generateCanvas(32, 24);
 displayCanvas(canvas);
 // canvas.pixelArray[2][2].element.style.borderColor = "#111111";
 
