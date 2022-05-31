@@ -30,9 +30,11 @@ const generateCanvas = (pixelCount, pixelSize) => {
     return canvas;
 }
 
-// const deleteCurrentCanvas(){
-
-// }
+const removeCurrentCanvas = () => {
+    const documentCanvas = document.querySelector(".canvas");
+    while(documentCanvas.hasChildNodes)
+        documentCanvas.removeChild(documentCanvas.firstChild);
+}
 
 const displayCanvas = (canvas) => {
     canvas.pixelRows.forEach(element => {
