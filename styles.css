@@ -12,6 +12,16 @@ body{
     justify-content: space-between;
 }
 
+.row{
+    display: flex;
+    justify-content: center;
+}
+.pixel{
+    background-color: #1d63d4;
+    width: 15px;
+    height: 15px;
+}
+
 header, main, footer{
     flex-shrink: 0;
 }
