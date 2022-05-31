@@ -52,3 +52,7 @@ footer{
     padding: 15px 10px;
     justify-content: right;
 }
+#colorCanvas{
+    width: 250px;
+    height: 250px;
+}
